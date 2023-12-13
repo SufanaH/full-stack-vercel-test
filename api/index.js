@@ -9,10 +9,11 @@ const connectDB = require("../config/db");
 const app = express();
 
 const PORT = process.env.PORT || 3038
-const URL = (process.env.MONGODB_URL|| 'mongodb+srv://Sufana:sufana123@cluster0.zuslhqs.mongodb.net/full-stack-vercel-test?retryWrites=true&w=majority')
+//const MONGODB_URL = (process.env.MONGODB_URL || 'mongodb+srv://Sufana:sufana123@cluster0.zuslhqs.mongodb.net/full-stack-vercel-test?retryWrites=true&w=majority')
 
 
 connectDB();
+
 app.use(cors());
 app.get("/", (req, res) => {
   res.send("Hello, World! Welcome to my Server");
