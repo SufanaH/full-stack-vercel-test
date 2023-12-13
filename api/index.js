@@ -1,4 +1,5 @@
 const express = require("express");
+const cors = require('cors');
 
 require("dotenv").config();
 
@@ -12,7 +13,7 @@ const URL = (process.env.MONGODB_URL|| 'mongodb+srv://Sufana:sufana123@cluster0.
 
 
 connectDB();
-
+app.use(cors());
 app.get("/", (req, res) => {
   res.send("Hello, World! Welcome to my Server");
 });
